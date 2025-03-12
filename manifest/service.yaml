@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: nginx
-  namespace: argo-demo
+  namespace: argo-test
 spec:
   type: LoadBalancer
   selector:
