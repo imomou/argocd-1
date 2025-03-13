@@ -14,6 +14,8 @@ spec:
       server: https://kubernetes.default.svc
     - namespace: '*'
       server: https://kubernetes.default.svc
+    - namespace: argo-test
+      server: https://kubernetes.default.svc
   sourceRepos:
     - '*'
   roles:
