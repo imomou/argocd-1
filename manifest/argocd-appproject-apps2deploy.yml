@@ -9,8 +9,6 @@ spec:
       server: https://kubernetes.default.svc
     - namespace: '*'
       server: https://kubernetes.default.svc
-    - namespace: argo-test
-      server: https://kubernetes.default.svc
   sourceRepos:
     - '*'
   roles:
@@ -22,3 +20,8 @@ spec:
       - p, proj:apps2deploy:create-sync, applications, update, apps2deploy/*, allow
       - p, proj:apps2deploy:create-sync, applications, delete, apps2deploy/*, allow
       - p, proj:apps2deploy:create-sync, applications, sync, apps2deploy/*, allow
+      - p, proj:argo-test:create-sync, applications, get, apps2deploy/*, allow
+      - p, proj:argo-test:create-sync, applications, create, apps2deploy/*, allow
+      - p, proj:argo-test:create-sync, applications, update, apps2deploy/*, allow
+      - p, proj:argo-test:create-sync, applications, delete, apps2deploy/*, allow
+      - p, proj:argo-test:create-sync, applications, sync, apps2deploy/*, allow
