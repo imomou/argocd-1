@@ -25,3 +25,12 @@ spec:
       - p, proj:argo-test:create-sync, applications, update, apps2deploy/*, allow
       - p, proj:argo-test:create-sync, applications, delete, apps2deploy/*, allow
       - p, proj:argo-test:create-sync, applications, sync, apps2deploy/*, allow
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+      allowEmpty: true
+    syncOptions:
+      - PruneLast=true
+      - CreateNamespace=true
+      - PrunePropagationPolicy=foreground
